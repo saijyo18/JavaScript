@@ -210,3 +210,100 @@
 // } catch {
 //     console.log("A is not defined");
 // }
+
+// console.log("hello");
+// console.log("hello");
+// try {
+//     console.log(A);
+// } catch(e){
+//     console.log("Invalid a is not deifned");
+//     console.log(e);
+// } 
+// console.log("hello again");
+
+// ARROW FUNCTION
+// const sum = (a,b) => {
+//     console.log(a+b);
+// }
+
+// const cube = (n) => {
+//     console.log(n*n*n);
+// }
+
+// const mul = (a,b) => (
+//     a*b 
+// )
+
+//SET TIMEOUT FUNCTION - function that helps us to set the timeout 
+
+// console.log("hi there");
+
+// setTimeout( () => {
+//     console.log("Apna college");
+// }, 4000);
+
+// console.log("Welcome to");
+
+// console.log("Watch this , Watch This")
+
+// const rm = (str) => {
+//     console.log(str);
+// }
+
+// setTimeout ( rm,1000, "BEAT GOING HOOLIGAN");
+// setTimeout ( rm,2000, "WE POP OUT");
+// setTimeout ( rm,3000, "WE ACTIN");
+// setTimeout ( rm,4000, "A FOOLAGAIN");
+// setTimeout ( rm,5000, "HA HA HA HA HA HA HAHAHA HAHAH ");
+
+//SET INTERVAL 
+
+// setInterval ( () => {
+//     console.log("hello world");
+// }, 2000)
+
+// arrow function 
+
+// let avg = (arr) => {
+//     let sum=0;
+//     for(let i=0 ;i <arr.length;i++){
+//         sum+= arr[i];
+//     }
+
+//     return (sum/arr.length);
+// }
+
+// console.log(avg([10,20,30,40,50]));
+
+// let iseven = n => (
+//     (n%2 == 0)
+// );
+
+// console.log(iseven(4))
+
+// const object = {
+//     message: "hELLW WORLD",
+
+//     longmessage() {
+//         console.log("this.message");
+//     }
+// }
+
+// setTime
+
+// let length =4;
+
+// function callback() {
+//     console.log(this.length);
+// }
+
+// const object = {
+//     length:5,
+//     method(callback){
+//         callback();
+//     },
+
+// };
+
+// object.method(callback, 1,2 );
+
