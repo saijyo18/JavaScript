@@ -34,7 +34,7 @@
 //     alert("apna college");
 // }
 
-//ACTIVITY
+//ACTIVITY 
 
 // let btn = document.querySelector("button");
 
@@ -82,9 +82,12 @@
 //     console.log("this button has been clicked");
 // });
 
-// let form = document.querySelector("form")
+let form = document.querySelector("form")
 
-// form.addEventListener("submit", function(event) {
-//     event.preventDefault();
-//     alert("form submitted");
-// })
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    let inp =  document.querySelector("input");
+    console.log(inp.value);
+})
+
+// EXTRACTING FORM DATA
