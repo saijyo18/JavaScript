@@ -57,3 +57,9 @@
 //     let color = `rgb(${red}, ${green}, ${blue})`;
 //     return color;
 // }
+
+// let btn = document.querySelector("button");
+
+// btn.addEventListener("click", function(){
+//     console.log(this);
+// })
