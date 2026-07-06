@@ -63,3 +63,11 @@
 // btn.addEventListener("click", function(){
 //     console.log(this);
 // })
+
+//KEYBOARD EVENTS
+// let btn = document.querySelector("button");
+
+// btn.addEventListener("click",function(event) {
+//     console.log(event);
+//     console.log("this button has been clicked");
+// })
