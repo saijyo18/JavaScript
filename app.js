@@ -72,12 +72,12 @@
 //     console.log("this button has been clicked");
 // })
 
-let input = document.querySelector("input");
+// let input = document.querySelector("input");
 
 // input.addEventListener("keydown", function(){
 //     console.log("this button has been clicked");
 // });
 
-input.addEventListener("keyup", function(){
-    console.log("this button has been clicked");
-});
+// input.addEventListener("keyup", function(){
+//     console.log("this button has been clicked");
+// });
