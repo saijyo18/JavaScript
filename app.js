@@ -198,6 +198,9 @@ function savedata(data) {
 
 // promise  - fulfilled and reject - in case of fulfilled we use then
 // but in case of reject we use catch .
+
+// PROMISE CHAINING
+
 savedata("apna college")
     .then(() => {
         console.log("data1 saved promise fulfilled.");
@@ -213,5 +216,26 @@ savedata("apna college")
     .catch(() => {
     console.log("the promise has NOT been fullfiled");
     })
+    
 
-// PROMISE CHAINING
+// promises are rejected and resolved with some data()
+
+savedata("apna college")
+    .then((result) => {
+        console.log("Result : ", result);
+        console.log("data1 saved promise fulfilled.");
+        return savedata("helloworld");
+    })
+    .then((result)=> {
+        console.log("Result : ", result);
+        console.log("data2 saved");
+        return savedata("mathematics");
+    })
+    .then((result) => {
+        console.log("Result : ", result);
+        console.log("data3 saved")
+    })
+    .catch((error) => {
+        console.log("error: ", error);
+    console.log("the promise has NOT been fullfiled");
+    })
