@@ -112,8 +112,14 @@
 // }
 // three();
 
+// these settimeout function are executed by the browser
+// browser manages the delay 
+// synchronous code  and asynchronous code
 setTimeout(() => {
     console.log("Apna College");
 }, 2000);
 
-console.log("hello ...")
+setTimeout(() => {
+    console.log("HEY");
+}, 2000);
+console.log("hello ...");
