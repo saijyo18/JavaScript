@@ -156,28 +156,55 @@ setTimeout(() =>{
 //PROMISES - represents the eventual completion or failure of an asynchronous 
 // operation and its resulting value
 
-function savedata(data, success, failure) {
-    let internetspeed = Math.floor(( Math.random() * 10) + 1);
-    if( internetspeed > 4 ){
-        // console.log("your dta has been saved");
-        success();
-    } else {
-        failure();
-        // console.log("weak connection your data has been not been saved");
-    }
+// function savedata(data, success, failure) {
+//     let internetspeed = Math.floor(( Math.random() * 10) + 1);
+//     if( internetspeed > 4 ){
+//         // console.log("your dta has been saved");
+//         success();
+//     } else {
+//         failure();
+//         // console.log("weak connection your data has been not been saved");
+//     }
+// }
+
+// savedata("apna college" , 
+//     () => {
+//         console.log("You data has been saved:  ");
+//         savedata("hello world", 
+//             ()=> {
+//             console.log("success2 : data has been saved successfuly");
+//             }, 
+//             ()=> {
+//             console.log("failure: data has not been saved.");
+//             })
+//     }, 
+//     () => {
+//         console.log("weak connection your data has been not been saved");
+//     })
+
+//PROMISES - RESOLVE AND REJECT
+
+
+function savedata(data) {
+    return new Promise((resolve, reject) => {
+        let internetspeed = Math.floor(( Math.random() * 10) + 1);
+        if(internetspeed > 4){
+            resolve("success: data was saved");
+        } else {
+            reject("failure: data was not saved");
+        }
+    })
 }
 
-savedata("apna college" , 
-    () => {
-        console.log("You data has been saved:  ");
-        savedata("hello world", 
-            ()=> {
-            console.log("success2 : data has been saved successfuly");
-            }, 
-            ()=> {
-            console.log("failure: data has not been saved.");
-            })
-    }, 
-    () => {
-        console.log("weak connection your data has been not been saved");
-    })
+// promise  - fulfilled and reject - in case of fulfilled we use then
+// but in case of reject we use catch .
+
+let request = savedata("apna college");
+
+console.log(request);
+request.then(() => {
+    console.log("promises has benn fulfilled");
+})
+.catch(() => {
+    console.log("the promise has NOT been fullfiled");
+})
