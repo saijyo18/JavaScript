@@ -126,17 +126,58 @@
 
 h1 = document.querySelector("h1");
 
-setTimeout(() => {
-    h1.style.color = "red";
-}, 1000);
 
-setTimeout(() => {
-    h1.style.color = "orange";
-}, 2000);
+function changecolor(color){
+    h1.style.color = color;
+}
+setTimeout(() =>{
+    changecolor(("red"));
+})
 
-setTimeout(() => {
-    h1.style.color = "green";
-}, 3000);
+setTimeout(() =>{
+    changecolor(("orange"),2000);
+})
+
+setTimeout(() =>{
+    changecolor(("green"),3000);
+})
+// setTimeout(changecolor("orange"),2000);
+// setTimeout(changecolor("green"),3000);
 
 
+// setTimeout(() => {
+//     h1.style.color = "orange";
+// }, 2000);
 
+// setTimeout(() => {
+//     h1.style.color = "green";
+// }, 3000);
+
+//PROMISES - represents the eventual completion or failure of an asynchronous 
+// operation and its resulting value
+
+function savedata(data, success, failure) {
+    let internetspeed = Math.floor(( Math.random() * 10) + 1);
+    if( internetspeed > 4 ){
+        // console.log("your dta has been saved");
+        success();
+    } else {
+        failure();
+        // console.log("weak connection your data has been not been saved");
+    }
+}
+
+savedata("apna college" , 
+    () => {
+        console.log("You data has been saved:  ");
+        savedata("hello world", 
+            ()=> {
+            console.log("success2 : data has been saved successfuly");
+            }, 
+            ()=> {
+            console.log("failure: data has not been saved.");
+            })
+    }, 
+    () => {
+        console.log("weak connection your data has been not been saved");
+    })
