@@ -115,11 +115,28 @@
 // these settimeout function are executed by the browser
 // browser manages the delay 
 // synchronous code  and asynchronous code
+// setTimeout(() => {
+//     console.log("Apna College");
+// }, 2000);
+
+// setTimeout(() => {
+//     console.log("HEY");
+// }, 2000);
+// console.log("hello ...");
+
+h1 = document.querySelector("h1");
+
 setTimeout(() => {
-    console.log("Apna College");
+    h1.style.color = "red";
+}, 1000);
+
+setTimeout(() => {
+    h1.style.color = "orange";
 }, 2000);
 
 setTimeout(() => {
-    console.log("HEY");
-}, 2000);
-console.log("hello ...");
+    h1.style.color = "green";
+}, 3000);
+
+
+
