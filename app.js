@@ -82,12 +82,38 @@
 //     console.log("this button has been clicked");
 // });
 
-let form = document.querySelector("form")
+// let form = document.querySelector("form")
 
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
-    let inp =  document.querySelector("input");
-    console.log(inp.value);
-})
+// form.addEventListener("submit", function(event) {
+//     event.preventDefault();
+//     let inp =  document.querySelector("input");
+//     console.log(inp.value);
+// })
 
 // EXTRACTING FORM DATA
+// function hello() {
+//     console.log("hello");
+// }
+
+// hello();
+
+//BREAKPOINTS
+// function one() {
+//     return 1;
+// }
+
+// function two() {
+//     return one() + one();
+// }
+
+// function three() {
+//     let ans = two() + one();
+//     console.log(ans);
+// }
+// three();
+
+setTimeout(() => {
+    console.log("Apna College");
+}, 2000);
+
+console.log("hello ...")
